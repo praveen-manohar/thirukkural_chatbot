@@ -69,10 +69,21 @@
         }
 
         function displayKural(kural) {
+
+            let words = kural.kural_tamil.split(' ');
+            let formattedKural = '';
+
+            for (let i = 0; i < words.length; i++) {
+                formattedKural += words[i] + ' ';
+                if ((i + 1) % 4 === 0) {
+                    formattedKural += '<br>'; // Add line break after every 4 words
+                }
+            }
+
             let html = `
                 <div class='card mt-3 p-3'>
                     <h5>Kural No: ${kural.kural_no}</h5>
-                    <p class='fw-bold'>${kural.kural_tamil}</p>
+                    <p class='fw-bold'>${formattedKural}</p>
                     <p>${kural.kural_english}</p>
                     <p><strong>Explanation (Tamil):</strong> ${kural.explanation_tamil}</p>
                     <p><strong>Explanation (English):</strong> ${kural.explanation_english}</p>
