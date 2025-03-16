@@ -14,8 +14,8 @@ This project is a Flask-based web application and API that allows users to searc
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/praveen-manohar/thirukkural_chatbot.git
-cd thirukkural_chatbot
+git clone https://github.com/your-repo/thirukkural-api.git
+cd thirukkural-api
 ```
 
 ### 2. Create a Virtual Environment
