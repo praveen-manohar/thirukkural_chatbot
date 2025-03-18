@@ -101,9 +101,13 @@ def chat_bot():
             "query": user_query,
             "results": results
         })
+    
+    # Define common stopwords to ignore in search
+    stopwords = {"give", "me", "about", "a", "the", "is", "to", "of", "for", "and", "in"}
+
 
     # Clean and If no exact match, try split word matching
-    query_words = [word.strip(string.punctuation).lower() for word in user_query.split() if word.strip(string.punctuation)]
+    query_words = [word.strip(string.punctuation).lower() for word in user_query.split() if word.strip(string.punctuation).lower() not in stopwords]
 
     word_matched_kurals = [
         k for k in kurals

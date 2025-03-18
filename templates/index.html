@@ -69,7 +69,6 @@
         }
 
         function displayKural(kural) {
-
             let words = kural.kural_tamil.split(' ');
             let formattedKural = '';
 
@@ -84,13 +83,12 @@
                 <div class='card mt-3 p-3'>
                     <h5>Kural No: ${kural.kural_no}</h5>
                     <p class='fw-bold'>${formattedKural}</p>
-                    <p>${kural.kural_english}</p>
-                    <p><strong>Explanation (Tamil):</strong> ${kural.explanation_tamil}</p>
-                    <p><strong>Explanation (English):</strong> ${kural.explanation_english}</p>
                 </div>
             `;
-            document.getElementById("result").innerHTML = html;
+
+            document.getElementById('kural-container').innerHTML = html;
         }
+
 
         function displayKuralList(kurals) {
             let html = "";
@@ -98,7 +96,7 @@
                 html += `
                     <div class='card mt-3 p-3'>
                         <h5>Kural No: ${kural.kural_no}</h5>
-                        <p class='fw-bold'>${formattedKural}</p>
+                        <p class='fw-bold'>${kural.kural_tamil}</p>
                         <p>${kural.kural_english}</p>
                         <p><strong>Explanation (Tamil):</strong> ${kural.explanation_tamil}</p>
                         <p><strong>Explanation (English):</strong> ${kural.explanation_english}</p>
