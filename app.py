@@ -137,7 +137,7 @@ def chat_bot():
 
 
 # API: Random Kural
-@app.route("/api/random", methods=["GET"])
+@app.route("/api/random", methods=["GET", "POST"])
 def random_kural():
     kural = Thirukkural.query.order_by(db.func.random()).first()
     if kural:
@@ -154,6 +154,7 @@ def random_kural():
 @app.route("/")
 def home():
     return render_template("index.html")
+    
 
 # ----------------- Run Server ---------------- #
 if __name__ == "__main__":

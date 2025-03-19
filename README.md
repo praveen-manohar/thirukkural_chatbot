@@ -19,7 +19,7 @@ This project is a **Flask-based REST API and Web Application** that allows users
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/praveen-manohar/thirukkural-api.git
+git clone https://github.com/your-repo/thirukkural-api.git
 cd thirukkural-api
 ```
 
@@ -141,8 +141,10 @@ You can customize these files to improve user experience.
 ---
 
 ## 🧑‍💻 Author
+
 **Praveen Manoharan**  
 [Zerrowtech](https://zerrowtech.com/praveen-manoharan/)
+
 
 ---
 
@@ -165,3 +167,6 @@ This project is licensed under the **MIT License** — free for personal and com
 fetch('http://127.0.0.1:5000/api/chat?query=love')
   .then(response => response.json())
   .then(data => console.log(data));
+
+
+
